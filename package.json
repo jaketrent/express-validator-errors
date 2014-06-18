@@ -1,0 +1,26 @@
+{
+  "name": "express-validator-errors",
+  "version": "1.0.0",
+  "description": "Error serializer for validation errors found in express-validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha --harmony \"test/unit/**/*.spec.coffee\""
+  },
+  "keywords": [
+    "node-validator",
+    "express-validator",
+    "json",
+    "error",
+    "serializer"
+  ],
+  "author": "jaketrent",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "coffee-script": "~1.7.1",
+    "should": "~4.0.4"
+  },
+  "dependencies": {
+    "underscore": "~1.6.0"
+  }
+}
