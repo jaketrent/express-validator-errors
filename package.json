@@ -1,6 +1,6 @@
 {
   "name": "express-validator-errors",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Error serializer for validation errors found in express-validator",
   "main": "index.js",
   "repository": {
