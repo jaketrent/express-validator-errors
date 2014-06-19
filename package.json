@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Error serializer for validation errors found in express-validator",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaketrent/express-validator-errors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jaketrent/express-validator-errors/issues"
+  },
+  "homepage": "https://github.com/jaketrent/express-validator-errors",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --harmony \"test/unit/**/*.spec.coffee\""
   },
@@ -18,7 +26,8 @@
   "devDependencies": {
     "mocha": "~1.20.1",
     "coffee-script": "~1.7.1",
-    "should": "~4.0.4"
+    "should": "~4.0.4",
+    "rf-release": "~0.1.2"
   },
   "dependencies": {
     "underscore": "~1.6.0"
