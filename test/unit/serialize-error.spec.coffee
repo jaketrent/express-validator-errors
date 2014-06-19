@@ -1,7 +1,7 @@
 should = require 'should'
 
 path = require '../util/path'
-serialize = require(path.toApp('error-serializer'))
+serialize = require(path.toApp('serialize-error'))
 
 describe 'error-serializer', ->
 
