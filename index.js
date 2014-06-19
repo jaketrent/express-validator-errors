@@ -1,4 +1,4 @@
-var req = require('./lib/error-serializer')
+var req = require('./lib/add-error-to-req')
 var serialize = require('./lib/serialize-error')
 
 exports.serialize = serialize
