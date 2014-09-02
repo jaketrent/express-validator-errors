@@ -56,12 +56,12 @@ describe 'error-serializer', ->
 
     it 'shows the error message', ->
       e = new Error('some such explosion in the bowels of the app')
-      serialize(e).errors[0].exception.message.should.eql e.message
+      serialize(e).errors[0].msg.should.eql e.message
 
     it 'shows the error stack trace', ->
       e = new Error('some such explosion in the bowels of the app')
-      serialize(e).errors[0].exception.should.have.property 'stack'
-      serialize(e).errors[0].exception.stack.should.not.be.null
+      serialize(e).errors[0].should.have.property 'stack'
+      serialize(e).errors[0].stack.should.not.be.null
 
     it 'shows the other properties of the error', ->
       errName = 'SpecialError'
@@ -77,8 +77,14 @@ describe 'error-serializer', ->
       e = new SpecialError('some such explosion in the bowels of the app', specialVal)
       serializeed = serialize(e)
 
-      serializeed.errors[0].exception.name.should.eql errName
-      serializeed.errors[0].exception.special.should.eql specialVal
+      serializeed.errors[0].name.should.eql errName
+      serializeed.errors[0].special.should.eql specialVal
+
+    it 'has a param name of "server-error"', ->
+      e = new Error('some such explosion in the bowels of the app')
+      # TODO: adjust to 'id' in future versions -- validator portions should be
+      # changeable via the express-validator serializer object
+      serialize(e).errors[0].param.should.eql 'server-error'
 
   describe 'Validation Errors', ->
 
